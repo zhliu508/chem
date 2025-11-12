@@ -1,0 +1,64 @@
+reactant,zwelite,product,step,relation
+n-octane,Au/ZSM-5,alkene,[1]R1,Au
+n-octane,Au/ZSM-5,H2,[1]R1,Au
+alkene,Au/ZSM-5,propylene,[1]R2,Brønsted acid
+alkene,H-ZSM-5,carbenium ion,[2]R1,Brønsted acid
+carbenium ion,H-ZSM-5,isomerized carbenium ion,[2]R2,Brønsted acid
+CaC2,,CaCN2,[3]R1,
+CaC2,,C,[3]R1,
+N2,,CaCN2,[3]R1,
+N2,,C,[3]R1,
+CaCN2,,CaSO4,[3]R2,
+CaCN2,,NH2CN,[3]R2,
+H2SO4,,CaSO4,[3]R2,
+H2SO4,,NH2CN,[3]R2,
+CO(NH2)2,,NH2CN,[3]R3,
+CO(NH2)2,,NH3,[3]R3,
+CO,,NH2CN,[3]R4,
+CO,,H2O,[3]R4,
+NH3,,NH2CN,[3]R4,
+NH3,,H2O,[3]R4,
+polypropylene,H-MFI,oligomers,[4]R1,external Brønsted acid
+oligomer,H-MFI,light olefins,[4]R2,Brønsted acid
+alkane,Zn-ZSM-5,alkene,[5]R1,Zn
+alkane,Zn-ZSM-5,H2,[5]R1,Zn
+alkane,Zn-ZSM-5,Zn-alkyl,[5]R2,Zn
+alkane,Zn-ZSM-5,Zn-H,[5]R2,Zn
+propane,Pt@Sn-MFI,propyl,[6]R1,Pt
+propane,Pt@Sn-MFI,H,[6]R1,Pt
+H (from propane),Pt@Sn-MFI,H2,[6]R2,Pt / Si-OH
+H (from Si-OH),Pt@Sn-MFI,H2,[6]R2,Pt / Si-OH
+methanol,H-ZSM-5,methylated aromatic,[7]R1,Brønsted acid
+aromatic HCP,H-ZSM-5,methylated aromatic,[7]R1,Brønsted acid
+methylated aromatic,H-ZSM-5,ethene,[7]R2,Brønsted acid
+methylated aromatic,H-ZSM-5,propene,[7]R2,Brønsted acid
+methanol,H-ZSM-5,C3+ olefins,[7]R3,Brønsted acid
+alkene HCP,H-ZSM-5,C3+ olefins,[7]R3,Brønsted acid
+C3H8,H-ZSM5,C3H6,[8]R1,Brønsted acid / Zn
+C3H8,H-ZSM5,H2,[8]R1,Brønsted acid / Zn
+C3H6,H-ZSM5,CH4,[8]R2,Brønsted acid
+C3H6,H-ZSM5,C2H4,[8]R2,Brønsted acid
+alkene oligomers,H-ZSM5,aromatics,[8]R3,Brønsted acid / Zn
+alkene oligomers,H-ZSM5,H2,[8]R3,Brønsted acid / Zn
+bio-oil oxygenates,HZSM-5,hydrogenated intermediates,[9]R1,metal / acid
+H2,HZSM-5,hydrogenated intermediates,[9]R1,metal / acid
+intermediates,HZSM-5,hydrocarbons,[9]R2,Brønsted acid
+intermediates,HZSM-5,H2O / CO2,[9]R2,Brønsted acid
+propene oxide,H-ZSM-5,carbenium ion intermediate,[10]R1,Brønsted acid
+carbenium ion intermediate,H-ZSM-5,propanal,[10]R2,Brønsted acid
+propene oxide,H-ZSM-5,carbenium ion intermediate,[10]R3,Brønsted acid
+carbenium ion intermediate,H-ZSM-5,propanone,[10]R4,Brønsted acid
+1-butene,HZSM-5,octenes,[11]R1,Brønsted acid
+octenes,HZSM-5,propene,[11]R2,Brønsted acid
+octenes,HZSM-5,ethene,[11]R2,Brønsted acid
+"2,5-dimethylfuran",Sn-BEA,cycloadduct,[12]R1,none
+ethylene,Sn-BEA,cycloadduct,[12]R1,none
+cycloadduct,Sn-BEA,p-xylene,[12]R2,Lewis acid
+cycloadduct,Sn-BEA,H2O,[12]R2,Lewis acid
+n-heptane,Ga/H-ZSM-5,heptene,[13]R1,[GaH]2+
+n-heptane,Ga/H-ZSM-5,H2,[13]R1,[GaH]2+
+heptene,Ga/H-ZSM-5,toluene,[13]R2,BAS / [GaH]2+
+2-MF,HZSM-5,cycloadduct,[14]R1,Lewis acid
+alkene,HZSM-5,cycloadduct,[14]R1,Lewis acid
+cycloadduct,HZSM-5,aromatic,[14]R2,Brønsted acid
+cycloadduct,HZSM-5,H2O,[14]R2,Brønsted acid

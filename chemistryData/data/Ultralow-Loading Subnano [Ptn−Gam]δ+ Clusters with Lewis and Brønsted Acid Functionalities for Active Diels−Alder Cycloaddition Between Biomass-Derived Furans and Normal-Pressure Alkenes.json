@@ -1,0 +1,181 @@
+{
+  "zeolite": {
+    "name": "HZSM-5",
+    "framework_code": "MFI",
+    "pore_system": ["10MR"],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Brønsted acid",
+        "T_position": "",
+        "proton_on": ""
+      }
+    ],
+    "composition": {
+      "Si/Al": 15,
+      "heteroatoms": []
+    },
+    "defects": {
+      "type": "none"
+    }
+  },
+  "reaction_system": {
+    "name": "Diels-Alder cycloaddition between 2-methylfuran and alkenes",
+    "phase": "gas",
+    "temperature_C": 500,
+    "pressure_atm": 1,
+    "substrates": [
+      {
+        "name": "2-methylfuran",
+        "formula": "C5H6O",
+        "polarity": "polar",
+        "size_A": 4.0
+      },
+      {
+        "name": "ethylene",
+        "formula": "C2H4",
+        "polarity": "nonpolar",
+        "size_A": 2.8
+      },
+      {
+        "name": "propylene",
+        "formula": "C3H6",
+        "polarity": "nonpolar",
+        "size_A": 3.2
+      }
+    ],
+    "products": ["benzene", "toluene", "xylene"],
+    "assisting_molecules": [],
+    "reaction_type": ["Diels-Alder cycloaddition", "dehydration"],
+    "reversibility": false,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "2-MF",
+      "site_type": "Lewis acid",
+      "T_site": "",
+      "oxygen": "",
+      "channel_type": "10MR",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": ["electrostatic"],
+      "competitive_adsorption": [],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [
+    {
+      "metal": "Pt",
+      "oxidation_state": "+delta",
+      "location": "HZSM-5 surface",
+      "coordination_environment": {
+        "framework_oxygens": null,
+        "geometry": ""
+      },
+      "modification_type": "impregnation",
+      "role_in_reaction": [
+        "Lewis acid for adsorption",
+        "electron transfer"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": true
+    },
+    {
+      "metal": "Ga",
+      "oxidation_state": "+delta",
+      "location": "HZSM-5 surface",
+      "coordination_environment": {
+        "framework_oxygens": null,
+        "geometry": ""
+      },
+      "modification_type": "impregnation",
+      "role_in_reaction": [
+        "Lewis acid for adsorption",
+        "electron transfer"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": true
+    }
+  ],
+  "intermediates": [
+    {
+      "name": "cycloadduct",
+      "type": "adsorbed",
+      "bound_site": "acid site",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Adsorption and cycloaddition",
+      "reactants": ["2-MF", "alkene"],
+      "products": ["cycloadduct"],
+      "site": "Lewis acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "Dehydration of cycloadduct",
+      "reactants": ["cycloadduct"],
+      "products": ["aromatic", "H2O"],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": 47,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "furan",
+      "reactions": [
+        {
+          "nucleophile": "H2O",
+          "products": ["hydrolysis products"],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "hydrolysis"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "",
+    "model": "",
+    "temperature_dependent": false,
+    "molecules": [],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Jian Zhang, Zhentao Wang, Yufei Cai, Ling Ma, Shanshan Guo, Weibing Wu, Yuting Huang, Hexiang Yu, Weirong Zhao",
+    "name": "Ultralow-Loading Subnano [Ptn−Gam]δ+ Clusters with Lewis and Brønsted Acid Functionalities for Active Diels−Alder Cycloaddition Between Biomass-Derived Furans and Normal-Pressure Alkenes",
+    "date": "2025-05-20",
+    "doi": [
+      "10.1021/acssuschemeng.5c02727"
+    ],
+    "journal": "ACS Sustainable Chem. Eng."
+  }
+}

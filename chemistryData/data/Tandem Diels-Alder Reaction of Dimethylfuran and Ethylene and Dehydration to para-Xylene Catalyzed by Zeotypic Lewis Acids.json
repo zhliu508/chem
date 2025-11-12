@@ -1,0 +1,185 @@
+{
+  "zeolite": {
+    "name": "Sn-BEA",
+    "framework_code": "BEA",
+    "pore_system": [
+      "12MR"
+    ],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Lewis acid",
+        "T_position": "Sn",
+        "proton_on": ""
+      }
+    ],
+    "composition": {
+      "Si/Al": null,
+      "heteroatoms": [
+        "Sn",
+        "Zr",
+        "Ti"
+      ]
+    },
+    "defects": {
+      "type": "open sites (hydrolyzed)"
+    }
+  },
+  "reaction_system": {
+    "name": "Diels-Alder aromatization of 2,5-dimethylfuran and ethylene",
+    "phase": "liquid",
+    "temperature_C": null,
+    "pressure_atm": null,
+    "substrates": [
+      {
+        "name": "2,5-dimethylfuran",
+        "formula": "C6H8O",
+        "polarity": "polar",
+        "size_A": 4.5
+      },
+      {
+        "name": "ethylene",
+        "formula": "C2H4",
+        "polarity": "nonpolar",
+        "size_A": 2.8
+      }
+    ],
+    "products": [
+      "p-xylene"
+    ],
+    "assisting_molecules": [],
+    "reaction_type": [
+      "Diels-Alder",
+      "dehydration"
+    ],
+    "reversibility": true,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "cycloadduct",
+      "site_type": "Lewis acid",
+      "T_site": "Sn",
+      "oxygen": "",
+      "channel_type": "12MR",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": [
+        "confinement"
+      ],
+      "competitive_adsorption": [
+        "2,5-dimethylfuran"
+      ],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [
+    {
+      "metal": "Sn",
+      "oxidation_state": "+4",
+      "location": "framework T-site",
+      "coordination_environment": {
+        "framework_oxygens": 4,
+        "geometry": "tetrahedral"
+      },
+      "modification_type": "framework incorporation",
+      "role_in_reaction": [
+        "Lewis acid for dehydration"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": false
+    }
+  ],
+  "intermediates": [
+    {
+      "name": "oxanorbornene cycloadduct",
+      "type": "adsorbed",
+      "bound_site": "Lewis acid",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Diels-Alder cycloaddition (homogeneous)",
+      "reactants": [
+        "2,5-dimethylfuran",
+        "ethylene"
+      ],
+      "products": [
+        "cycloadduct"
+      ],
+      "site": "none",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "Dehydration of cycloadduct to p-xylene",
+      "reactants": [
+        "cycloadduct"
+      ],
+      "products": [
+        "p-xylene",
+        "H2O"
+      ],
+      "site": "Lewis acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "Brønsted acid sites",
+      "reactions": [
+        {
+          "nucleophile": "H2O",
+          "products": [
+            "hydrolysis products"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "hydrolysis"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "confinement effects",
+    "model": "",
+    "temperature_dependent": true,
+    "molecules": [
+      "2,5-dimethylfuran"
+    ],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Ryan E. Patet, Wei Fan, Dionisios G. Vlachos, Stavros Caratzoulas",
+    "name": "Tandem Diels-Alder Reaction of Dimethylfuran and Ethylene and Dehydration to para-Xylene Catalyzed by Zeotypic Lewis Acids",
+    "date": "2017-02-28",
+    "doi": [
+      "10.1002/cctc.201601584"
+    ],
+    "journal": "ChemCatChem"
+  }
+}

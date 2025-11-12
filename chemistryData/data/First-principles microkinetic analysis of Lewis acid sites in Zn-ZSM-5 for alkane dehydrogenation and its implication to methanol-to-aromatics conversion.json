@@ -1,0 +1,200 @@
+{
+  "zeolite": {
+    "name": "Zn-ZSM-5",
+    "framework_code": "MFI",
+    "pore_system": [
+      "10MR"
+    ],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Lewis acid",
+        "T_position": "",
+        "proton_on": ""
+      }
+    ],
+    "composition": {
+      "Si/Al": null,
+      "heteroatoms": [
+        "Zn"
+      ]
+    },
+    "defects": {
+      "type": "none"
+    }
+  },
+  "reaction_system": {
+    "name": "Alkane dehydrogenation",
+    "phase": "gas",
+    "temperature_C": null,
+    "pressure_atm": null,
+    "substrates": [
+      {
+        "name": "butane",
+        "formula": "C4H10",
+        "polarity": "nonpolar",
+        "size_A": 4.0
+      },
+      {
+        "name": "cyclohexane",
+        "formula": "C6H12",
+        "polarity": "nonpolar",
+        "size_A": 5.0
+      }
+    ],
+    "products": [
+      "butene",
+      "cyclohexene",
+      "H2"
+    ],
+    "assisting_molecules": [],
+    "reaction_type": [
+      "dehydrogenation"
+    ],
+    "reversibility": true,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "alkane",
+      "site_type": "Lewis acid",
+      "T_site": "",
+      "oxygen": "",
+      "channel_type": "10MR",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": [
+        "electrostatic"
+      ],
+      "competitive_adsorption": [],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [
+    {
+      "metal": "Zn",
+      "oxidation_state": "+2",
+      "location": "exchange site",
+      "coordination_environment": {
+        "framework_oxygens": 2,
+        "geometry": ""
+      },
+      "modification_type": "cation exchange",
+      "role_in_reaction": [
+        "C-H activation"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": false
+    },
+    {
+      "metal": "Zn",
+      "oxidation_state": "+1",
+      "location": "exchange site",
+      "coordination_environment": {
+        "framework_oxygens": 1,
+        "geometry": ""
+      },
+      "modification_type": "cation exchange",
+      "role_in_reaction": [
+        "C-H activation"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [
+        "OH",
+        "H"
+      ],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": false
+    }
+  ],
+  "intermediates": [
+    {
+      "name": "Zn-alkyl",
+      "type": "covalent",
+      "bound_site": "Zn",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Concerted C-H bond activation",
+      "reactants": [
+        "alkane"
+      ],
+      "products": [
+        "alkene",
+        "H2"
+      ],
+      "site": "Zn",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "Stepwise C-H bond activation (first step)",
+      "reactants": [
+        "alkane"
+      ],
+      "products": [
+        "Zn-alkyl",
+        "Zn-H"
+      ],
+      "site": "Zn",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "high temperature",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "coke"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "coking"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "",
+    "model": "",
+    "temperature_dependent": false,
+    "molecules": [],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Yu-Jue Du, Wen-De Hu, Chuan-Ming Wang, Jian Zhou, Guang Yang, Yang-Dong Wang, Wei-Min Yang",
+    "name": "First-principles microkinetic analysis of Lewis acid sites in Zn-ZSM-5 for alkane dehydrogenation and its implication to methanol-to-aromatics conversion",
+    "date": "2021-01-06",
+    "doi": [
+      "10.1039/d0cy02318c"
+    ],
+    "journal": "Catal. Sci. Technol."
+  }
+}

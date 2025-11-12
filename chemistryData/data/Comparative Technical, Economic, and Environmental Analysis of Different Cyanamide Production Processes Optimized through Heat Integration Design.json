@@ -1,0 +1,198 @@
+{
+  "zeolite": {
+    "name": null,
+    "framework_code": null,
+    "pore_system": [],
+    "T_sites": [],
+    "acid_sites": [],
+    "composition": {
+      "Si/Al": null,
+      "heteroatoms": []
+    },
+    "defects": {
+      "type": "none"
+    }
+  },
+  "reaction_system": {
+    "name": "Cyanamide production",
+    "phase": "gas/liquid/solid",
+    "temperature_C": null,
+    "pressure_atm": null,
+    "substrates": [
+      {
+        "name": "calcium carbide",
+        "formula": "CaC2",
+        "polarity": "polar",
+        "size_A": null
+      },
+      {
+        "name": "nitrogen",
+        "formula": "N2",
+        "polarity": "nonpolar",
+        "size_A": 3.0
+      },
+      {
+        "name": "sulfuric acid",
+        "formula": "H2SO4",
+        "polarity": "polar",
+        "size_A": null
+      },
+      {
+        "name": "urea",
+        "formula": "CO(NH2)2",
+        "polarity": "polar",
+        "size_A": null
+      },
+      {
+        "name": "CO",
+        "formula": "CO",
+        "polarity": "nonpolar",
+        "size_A": 2.8
+      },
+      {
+        "name": "NH3",
+        "formula": "NH3",
+        "polarity": "polar",
+        "size_A": 2.6
+      }
+    ],
+    "products": [
+      "cyanamide",
+      "dicyandiamide"
+    ],
+    "assisting_molecules": [],
+    "reaction_type": [
+      "nitridation",
+      "acidolysis",
+      "decomposition"
+    ],
+    "reversibility": false,
+    "catalytic_cycle_closed": false
+  },
+  "adsorption_sites": [],
+  "metal_modifications": [],
+  "intermediates": [
+    {
+      "name": "calcium cyanamide",
+      "type": "solid",
+      "bound_site": "",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Nitridation of calcium carbide (calcium carbide process)",
+      "reactants": [
+        "CaC2",
+        "N2"
+      ],
+      "products": [
+        "CaCN2",
+        "C"
+      ],
+      "site": "",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "Acidolysis of calcium cyanamide",
+      "reactants": [
+        "CaCN2",
+        "H2SO4"
+      ],
+      "products": [
+        "CaSO4",
+        "NH2CN"
+      ],
+      "site": "",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R3",
+      "description": "Decomposition of urea (urea process)",
+      "reactants": [
+        "CO(NH2)2"
+      ],
+      "products": [
+        "NH2CN",
+        "NH3"
+      ],
+      "site": "",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R4",
+      "description": "Reaction of CO and NH3 (CO/NH3 process)",
+      "reactants": [
+        "CO",
+        "NH3"
+      ],
+      "products": [
+        "NH2CN",
+        "H2O"
+      ],
+      "site": "",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "dimerization",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "dicyandiamide"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "dimerization"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "",
+    "model": "",
+    "temperature_dependent": false,
+    "molecules": [],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Mengxiao Yu, Xiaobin Liu, Xiaoyu Zhang, Jinli Zhang, You Han",
+    "name": "Comparative Technical, Economic, and Environmental Analysis of Different Cyanamide Production Processes Optimized through Heat Integration Design",
+    "date": "2023-11-30",
+    "doi": [
+      "10.1021/acssuschemeng.3c05120"
+    ],
+    "journal": "ACS Sustainable Chem. Eng."
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "zeolite": {
+    "name": "Ga/H-ZSM-5",
+    "framework_code": "MFI",
+    "pore_system": [
+      "10MR"
+    ],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Brønsted acid",
+        "T_position": "",
+        "proton_on": ""
+      },
+      {
+        "site_type": "Lewis acid",
+        "T_position": "",
+        "proton_on": ""
+      }
+    ],
+    "composition": {
+      "Si/Al": null,
+      "heteroatoms": [
+        "Ga"
+      ]
+    },
+    "defects": {
+      "type": "none"
+    }
+  },
+  "reaction_system": {
+    "name": "n-Heptane dehydrocyclization",
+    "phase": "gas",
+    "temperature_C": null,
+    "pressure_atm": null,
+    "substrates": [
+      {
+        "name": "n-heptane",
+        "formula": "C7H16",
+        "polarity": "nonpolar",
+        "size_A": 5.0
+      }
+    ],
+    "products": [
+      "toluene"
+    ],
+    "assisting_molecules": [],
+    "reaction_type": [
+      "dehydrocyclization",
+      "dehydrogenation"
+    ],
+    "reversibility": true,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "n-heptane",
+      "site_type": "Lewis acid",
+      "T_site": "",
+      "oxygen": "",
+      "channel_type": "10MR",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": [
+        "electrostatic"
+      ],
+      "competitive_adsorption": [],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [
+    {
+      "metal": "Ga",
+      "oxidation_state": "+1",
+      "location": "extraframework",
+      "coordination_environment": {
+        "framework_oxygens": null,
+        "geometry": ""
+      },
+      "modification_type": "modification",
+      "role_in_reaction": [
+        "dehydrogenation"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": true
+    },
+    {
+      "metal": "Ga",
+      "oxidation_state": "+3",
+      "location": "extraframework",
+      "coordination_environment": {
+        "framework_oxygens": null,
+        "geometry": ""
+      },
+      "modification_type": "modification",
+      "role_in_reaction": [
+        "dehydrogenation"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [
+        "H"
+      ],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": true
+    }
+  ],
+  "intermediates": [
+    {
+      "name": "carbenium ion",
+      "type": "ionic",
+      "bound_site": "active site",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "C-H bond cleavage",
+      "reactants": [
+        "n-heptane"
+      ],
+      "products": [
+        "heptene",
+        "H2"
+      ],
+      "site": "[GaH]2+",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "C1-C6 ring closure",
+      "reactants": [
+        "heptene"
+      ],
+      "products": [
+        "toluene"
+      ],
+      "site": "BAS / [GaH]2+",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "BAS",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "C1-C2"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "cracking"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "",
+    "model": "",
+    "temperature_dependent": false,
+    "molecules": [],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Guangyuan He, Donghai Mei",
+    "name": "The critical role of the active [GaH]2+ site in n-heptane dehydrocyclization over Ga/H-ZSM-5 zeolite",
+    "date": "2024-07-27",
+    "doi": [
+      "10.1039/d4cy00648h"
+    ],
+    "journal": "Catal. Sci. Technol."
+  }
+}

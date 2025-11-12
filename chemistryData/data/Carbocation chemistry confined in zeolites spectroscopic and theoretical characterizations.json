@@ -1,0 +1,197 @@
+{
+  "zeolite": {
+    "name": "H-ZSM-5",
+    "framework_code": "MFI",
+    "pore_system": [
+      "10MR"
+    ],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Brønsted acid",
+        "T_position": "",
+        "proton_on": ""
+      }
+    ],
+    "composition": {
+      "Si/Al": null,
+      "heteroatoms": []
+    },
+    "defects": {
+      "type": "none"
+    }
+  },
+  "reaction_system": {
+    "name": "Acid-catalyzed hydrocarbon conversions",
+    "phase": "gas",
+    "temperature_C": null,
+    "pressure_atm": null,
+    "substrates": [
+      {
+        "name": "methanol",
+        "formula": "CH3OH",
+        "polarity": "polar",
+        "size_A": 3.2
+      },
+      {
+        "name": "alkenes",
+        "formula": "CnH2n",
+        "polarity": "nonpolar",
+        "size_A": null
+      },
+      {
+        "name": "alkanes",
+        "formula": "CnH2n+2",
+        "polarity": "nonpolar",
+        "size_A": null
+      },
+      {
+        "name": "aromatics",
+        "formula": "C6H6 etc.",
+        "polarity": "nonpolar",
+        "size_A": null
+      }
+    ],
+    "products": [
+      "olefins",
+      "aromatics",
+      "isomers",
+      "cracked hydrocarbons"
+    ],
+    "assisting_molecules": [],
+    "reaction_type": [
+      "methanol to olefins",
+      "alkylation",
+      "cracking",
+      "isomerization"
+    ],
+    "reversibility": true,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "carbocation",
+      "site_type": "Brønsted acid",
+      "T_site": "",
+      "oxygen": "",
+      "channel_type": "10MR",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": [
+        "confinement effect",
+        "electrostatic"
+      ],
+      "competitive_adsorption": [],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [],
+  "intermediates": [
+    {
+      "name": "chain carbenium ion",
+      "type": "ionic",
+      "bound_site": "framework oxygen",
+      "structure_reference": ""
+    },
+    {
+      "name": "cyclic carbenium ion",
+      "type": "ionic",
+      "bound_site": "framework oxygen",
+      "structure_reference": ""
+    },
+    {
+      "name": "alkoxide",
+      "type": "covalent",
+      "bound_site": "framework oxygen",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Protonation of alkene to carbenium ion",
+      "reactants": [
+        "alkene"
+      ],
+      "products": [
+        "carbenium ion"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": [
+          {
+            "atoms": [
+              "H_proton",
+              "C_alkene"
+            ],
+            "distance_A": null
+          }
+        ]
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "Hydride shift in carbenium ion",
+      "reactants": [
+        "carbenium ion"
+      ],
+      "products": [
+        "isomerized carbenium ion"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "carbenium ion",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "cracked products"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "beta-scission"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "confinement effect on diffusion",
+    "model": "",
+    "temperature_dependent": true,
+    "molecules": [
+      "carbocations"
+    ],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Wei Chen, Xianfeng Yi, Zhiqiang Liu, Xiaomin Tang, Anmin Zheng",
+    "name": "Carbocation chemistry confined in zeolites: spectroscopic and theoretical characterizations",
+    "date": "2022-05-10",
+    "doi": [
+      "10.1039/d1cs00966d"
+    ],
+    "journal": "Chem. Soc. Rev."
+  }
+}

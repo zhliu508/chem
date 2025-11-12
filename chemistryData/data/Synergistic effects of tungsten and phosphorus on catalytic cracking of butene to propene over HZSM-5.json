@@ -1,0 +1,196 @@
+{
+  "zeolite": {
+    "name": "HZSM-5",
+    "framework_code": "MFI",
+    "pore_system": [
+      "10MR"
+    ],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Brønsted acid",
+        "T_position": "",
+        "proton_on": ""
+      }
+    ],
+    "composition": {
+      "Si/Al": 35,
+      "heteroatoms": []
+    },
+    "defects": {
+      "type": "none"
+    }
+  },
+  "reaction_system": {
+    "name": "Catalytic cracking of 1-butene to propene",
+    "phase": "gas",
+    "temperature_C": null,
+    "pressure_atm": null,
+    "substrates": [
+      {
+        "name": "1-butene",
+        "formula": "C4H8",
+        "polarity": "nonpolar",
+        "size_A": 3.5
+      }
+    ],
+    "products": [
+      "propene",
+      "ethene",
+      "pentenes"
+    ],
+    "assisting_molecules": [
+      "steam"
+    ],
+    "reaction_type": [
+      "cracking",
+      "isomerization",
+      "dimerization"
+    ],
+    "reversibility": true,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "1-butene",
+      "site_type": "Brønsted acid",
+      "T_site": "",
+      "oxygen": "",
+      "channel_type": "10MR",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": [
+        "electrostatic"
+      ],
+      "competitive_adsorption": [],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [
+    {
+      "metal": "W",
+      "oxidation_state": "",
+      "location": "HZSM-5",
+      "coordination_environment": {
+        "framework_oxygens": null,
+        "geometry": "monotungstate"
+      },
+      "modification_type": "doping",
+      "role_in_reaction": [
+        "synergistic with P for cracking"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [
+        "P"
+      ],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": false
+    },
+    {
+      "metal": "P",
+      "oxidation_state": "",
+      "location": "HZSM-5",
+      "coordination_environment": {
+        "framework_oxygens": null,
+        "geometry": ""
+      },
+      "modification_type": "doping",
+      "role_in_reaction": [
+        "hydrothermal stability",
+        "synergistic with W"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": false
+    }
+  ],
+  "intermediates": [
+    {
+      "name": "octenes",
+      "type": "adsorbed",
+      "bound_site": "acid site",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Isomerization and dimerization of 1-butene to octenes",
+      "reactants": [
+        "1-butene"
+      ],
+      "products": [
+        "octenes"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "Cracking of octenes to propene and ethene",
+      "reactants": [
+        "octenes"
+      ],
+      "products": [
+        "propene",
+        "ethene"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "strong acid sites",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "aromatics",
+            "coke"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "oligomerization"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "",
+    "model": "",
+    "temperature_dependent": false,
+    "molecules": [],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Nianhua Xue, Lei Nie, Dongmei Fang, Xuefeng Guo, Jianyi Shen, Weiping Ding, Yi Chen",
+    "name": "Synergistic effects of tungsten and phosphorus on catalytic cracking of butene to propene over HZSM-5",
+    "date": "2009",
+    "doi": [
+      "10.1016/j.apcata.2008.09.029"
+    ],
+    "journal": "Applied Catalysis A: General"
+  }
+}

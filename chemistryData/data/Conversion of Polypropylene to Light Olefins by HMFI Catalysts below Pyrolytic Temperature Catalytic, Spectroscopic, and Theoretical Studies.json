@@ -1,0 +1,169 @@
+{
+  "zeolite": {
+    "name": "H-MFI",
+    "framework_code": "MFI",
+    "pore_system": [
+      "10MR"
+    ],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Brønsted acid",
+        "T_position": "",
+        "proton_on": ""
+      }
+    ],
+    "composition": {
+      "Si/Al": null,
+      "heteroatoms": []
+    },
+    "defects": {
+      "type": "none"
+    }
+  },
+  "reaction_system": {
+    "name": "Catalytic cracking of polypropylene to light olefins",
+    "phase": "solid/gas",
+    "temperature_C": 290,
+    "pressure_atm": 1,
+    "substrates": [
+      {
+        "name": "polypropylene",
+        "formula": "(C3H6)n",
+        "polarity": "nonpolar",
+        "size_A": null
+      }
+    ],
+    "products": [
+      "ethene",
+      "propene",
+      "butene",
+      "pentene"
+    ],
+    "assisting_molecules": [],
+    "reaction_type": [
+      "cracking",
+      "beta-scission"
+    ],
+    "reversibility": false,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "oligomer",
+      "site_type": "Brønsted acid",
+      "T_site": "",
+      "oxygen": "",
+      "channel_type": "external surface",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": [
+        "electrostatic"
+      ],
+      "competitive_adsorption": [],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [],
+  "intermediates": [
+    {
+      "name": "short-chain oligomer",
+      "type": "adsorbed",
+      "bound_site": "Brønsted acid",
+      "structure_reference": ""
+    },
+    {
+      "name": "carbocation",
+      "type": "ionic",
+      "bound_site": "framework oxygen",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Cracking of PP to oligomers on external BAS",
+      "reactants": [
+        "polypropylene"
+      ],
+      "products": [
+        "oligomers"
+      ],
+      "site": "external Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "Beta-scission of oligomer to light olefins",
+      "reactants": [
+        "oligomer"
+      ],
+      "products": [
+        "light olefins"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": 118,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": [
+          {
+            "atoms": [
+              "C",
+              "C"
+            ],
+            "distance_A": null
+          }
+        ]
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "olefins",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "aromatics",
+            "coke"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "aromatization"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "",
+    "model": "",
+    "temperature_dependent": false,
+    "molecules": [],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Yuriko Ando, Takumi Miyakage, Akihiko Anzai, Mengwen Huang, Abdellah Ait El Fakir, Takashi Toyao, Yuta Nakasaka, Alisa Phuekphong, Makoto Ogawa, Alexander A. Kolganov, Evgeny A. Pidko, Ken-ichi Shimizu",
+    "name": "Conversion of Polypropylene to Light Olefins by HMFI Catalysts below Pyrolytic Temperature: Catalytic, Spectroscopic, and Theoretical Studies",
+    "date": "2025-01-10",
+    "doi": [
+      "10.1021/acs.jpcc.4c06925"
+    ],
+    "journal": "J. Phys. Chem. C"
+  }
+}

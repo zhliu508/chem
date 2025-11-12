@@ -1,0 +1,199 @@
+{
+  "zeolite": {
+    "name": "Pt@Sn-MFI",
+    "framework_code": "MFI",
+    "pore_system": [
+      "10MR"
+    ],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Lewis acid",
+        "T_position": "Sn",
+        "proton_on": ""
+      },
+      {
+        "site_type": "Brønsted acid",
+        "T_position": "",
+        "proton_on": "Si-OH (defect)"
+      }
+    ],
+    "composition": {
+      "Si/Al": null,
+      "heteroatoms": [
+        "Sn"
+      ]
+    },
+    "defects": {
+      "type": "Si-OH nests"
+    }
+  },
+  "reaction_system": {
+    "name": "Propane dehydrogenation",
+    "phase": "gas",
+    "temperature_C": 550,
+    "pressure_atm": 1,
+    "substrates": [
+      {
+        "name": "propane",
+        "formula": "C3H8",
+        "polarity": "nonpolar",
+        "size_A": 3.8
+      }
+    ],
+    "products": [
+      "propylene"
+    ],
+    "assisting_molecules": [],
+    "reaction_type": [
+      "dehydrogenation"
+    ],
+    "reversibility": true,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "propane",
+      "site_type": "Lewis acid",
+      "T_site": "Sn",
+      "oxygen": "",
+      "channel_type": "10MR",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": [
+        "anchoring"
+      ],
+      "competitive_adsorption": [],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [
+    {
+      "metal": "Pt",
+      "oxidation_state": "0",
+      "location": "anchored to Sn-MFI",
+      "coordination_environment": {
+        "framework_oxygens": 1,
+        "geometry": "cluster"
+      },
+      "modification_type": "encapsulation",
+      "role_in_reaction": [
+        "C-H activation"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [
+        "Sn-O"
+      ],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": true
+    },
+    {
+      "metal": "Sn",
+      "oxidation_state": "+4",
+      "location": "framework",
+      "coordination_environment": {
+        "framework_oxygens": 3,
+        "geometry": "open site"
+      },
+      "modification_type": "framework incorporation",
+      "role_in_reaction": [
+        "anchoring Pt",
+        "Lewis acid"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": false
+    }
+  ],
+  "intermediates": [
+    {
+      "name": "propyl",
+      "type": "adsorbed",
+      "bound_site": "Pt",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "C-H activation of propane on Pt",
+      "reactants": [
+        "propane"
+      ],
+      "products": [
+        "propyl",
+        "H"
+      ],
+      "site": "Pt",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "H2 formation via hydroxy-assisted pathway",
+      "reactants": [
+        "H (from propane)",
+        "H (from Si-OH)"
+      ],
+      "products": [
+        "H2"
+      ],
+      "site": "Pt / Si-OH",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "high temperature",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "coke"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "coking"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "wormhole structure",
+    "model": "",
+    "temperature_dependent": true,
+    "molecules": [
+      "propane"
+    ],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Qingpeng Cheng, Xueli Yao, Lifeng Ou, Zhenpeng Hu, Yu Pan, Lirong Zheng, Natalia Morlanes, Edy Abou-Hamad, Xingang Li, Yu Han, Jorge Gascon",
+    "name": "Highly efficient catalytic propane dehydrogenation driven by MFI zeolite defect sites",
+    "date": "2025-06-13",
+    "doi": [
+      "10.1038/s41467-025-61182-6"
+    ],
+    "journal": "Nature Communications"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "zeolite": {
+    "name": "HZSM-5",
+    "framework_code": "MFI",
+    "pore_system": [
+      "10MR"
+    ],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Brønsted acid",
+        "T_position": "",
+        "proton_on": ""
+      }
+    ],
+    "composition": {
+      "Si/Al": null,
+      "heteroatoms": []
+    },
+    "defects": {
+      "type": "none"
+    }
+  },
+  "reaction_system": {
+    "name": "Catalytic deoxygenation of biomass pyrolysis oil",
+    "phase": "gas",
+    "temperature_C": null,
+    "pressure_atm": null,
+    "substrates": [
+      {
+        "name": "bio-oil components",
+        "formula": "various (phenols, acids, aldehydes, ketones, furans)",
+        "polarity": "polar",
+        "size_A": null
+      }
+    ],
+    "products": [
+      "hydrocarbons",
+      "deoxygenated fuels"
+    ],
+    "assisting_molecules": [
+      "H2"
+    ],
+    "reaction_type": [
+      "deoxygenation",
+      "hydrodeoxygenation",
+      "decarboxylation",
+      "dehydration",
+      "hydrogenolysis"
+    ],
+    "reversibility": false,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "bio-oil molecules",
+      "site_type": "Brønsted acid",
+      "T_site": "",
+      "oxygen": "",
+      "channel_type": "10MR",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": [
+        "H-bond",
+        "electrostatic"
+      ],
+      "competitive_adsorption": [],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [
+    {
+      "metal": "various (Pt, Ni, etc.)",
+      "oxidation_state": "",
+      "location": "zeolite support",
+      "coordination_environment": {
+        "framework_oxygens": null,
+        "geometry": ""
+      },
+      "modification_type": "impregnation",
+      "role_in_reaction": [
+        "hydrogen activation",
+        "deoxygenation promotion"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": true
+    }
+  ],
+  "intermediates": [
+    {
+      "name": "carbocation",
+      "type": "ionic",
+      "bound_site": "framework oxygen",
+      "structure_reference": ""
+    },
+    {
+      "name": "alkoxide",
+      "type": "covalent",
+      "bound_site": "framework oxygen",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Hydrogenation of oxygenated compounds",
+      "reactants": [
+        "bio-oil oxygenates",
+        "H2"
+      ],
+      "products": [
+        "hydrogenated intermediates"
+      ],
+      "site": "metal / acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "Dehydration / decarboxylation",
+      "reactants": [
+        "intermediates"
+      ],
+      "products": [
+        "hydrocarbons",
+        "H2O / CO2"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "oxygenates",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "coke"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "polymerization"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "pore diffusion",
+    "model": "",
+    "temperature_dependent": true,
+    "molecules": [
+      "bio-oil molecules"
+    ],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Salman Raza Naqvi, Asif Hussain Khoja, Imtiaz Ali, Muhammad Naqvi, Tayyaba Noor, Awais Ahmad, Rafael Luque, Nor Aishah Saidina Amin",
+    "name": "Recent progress in catalytic deoxygenation of biomass pyrolysis oil using microporous zeolites for green fuels production",
+    "date": "2022-10-20",
+    "doi": [
+      "10.1016/j.fuel.2022.126268"
+    ],
+    "journal": "Fuel"
+  }
+}

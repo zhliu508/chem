@@ -1,0 +1,186 @@
+{
+  "zeolite": {
+    "name": "H-ZSM5",
+    "framework_code": "MFI",
+    "pore_system": [
+      "10MR"
+    ],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Brønsted acid",
+        "T_position": "",
+        "proton_on": ""
+      }
+    ],
+    "composition": {
+      "Si/Al": 14.5,
+      "heteroatoms": []
+    },
+    "defects": {
+      "type": "none"
+    }
+  },
+  "reaction_system": {
+    "name": "Conversion of light alkanes to aromatics",
+    "phase": "gas",
+    "temperature_C": 500,
+    "pressure_atm": 1,
+    "substrates": [
+      {
+        "name": "propane",
+        "formula": "C3H8",
+        "polarity": "nonpolar",
+        "size_A": 3.8
+      },
+      {
+        "name": "ethane",
+        "formula": "C2H6",
+        "polarity": "nonpolar",
+        "size_A": 3.5
+      }
+    ],
+    "products": [
+      "benzene",
+      "toluene",
+      "C8 aromatics",
+      "methane",
+      "ethene",
+      "ethene",
+      "propene",
+      "H2"
+    ],
+    "assisting_molecules": [],
+    "reaction_type": [
+      "dehydrogenation",
+      "oligomerization",
+      "cyclization",
+      "aromatization",
+      "beta-scission"
+    ],
+    "reversibility": true,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [],
+  "metal_modifications": [
+    {
+      "metal": "Zn",
+      "oxidation_state": "+2",
+      "location": "exchange sites",
+      "coordination_environment": {
+        "framework_oxygens": 2,
+        "geometry": ""
+      },
+      "modification_type": "cation exchange",
+      "role_in_reaction": [
+        "recombinative desorption of H-atoms",
+        "promotion of dehydrogenation steps"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": true
+    }
+  ],
+  "intermediates": [
+    {
+      "name": "propene",
+      "type": "adsorbed",
+      "bound_site": "Brønsted acid",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Alkane dehydrogenation",
+      "reactants": [
+        "C3H8"
+      ],
+      "products": [
+        "C3H6",
+        "H2"
+      ],
+      "site": "Brønsted acid / Zn",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "Oligomerization and beta-scission",
+      "reactants": [
+        "C3H6"
+      ],
+      "products": [
+        "CH4",
+        "C2H4"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R3",
+      "description": "Cyclization and aromatization",
+      "reactants": [
+        "alkene oligomers"
+      ],
+      "products": [
+        "aromatics",
+        "H2"
+      ],
+      "site": "Brønsted acid / Zn",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "alkene oligomers",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "light alkanes"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "beta-scission"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "",
+    "model": "",
+    "temperature_dependent": false,
+    "molecules": [],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Joseph A. Biscardi and Enrique Iglesia",
+    "name": "Reaction Pathways and Rate-Determining Steps in Reactions of Alkanes on H-ZSM5 and Zn/H-ZSM5 Catalysts",
+    "date": "1999",
+    "doi": [
+      "10.1006/jcat.1998.2312"
+    ],
+    "journal": "Journal of Catalysis"
+  }
+}

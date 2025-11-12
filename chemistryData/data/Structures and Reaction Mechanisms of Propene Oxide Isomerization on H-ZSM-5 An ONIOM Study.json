@@ -1,0 +1,209 @@
+{
+  "zeolite": {
+    "name": "H-ZSM-5",
+    "framework_code": "MFI",
+    "pore_system": [
+      "10MR"
+    ],
+    "T_sites": [
+      "T12"
+    ],
+    "acid_sites": [
+      {
+        "site_type": "Brønsted acid",
+        "T_position": "Al",
+        "proton_on": "O1"
+      }
+    ],
+    "composition": {
+      "Si/Al": null,
+      "heteroatoms": []
+    },
+    "defects": {
+      "type": "none"
+    }
+  },
+  "reaction_system": {
+    "name": "Isomerization of propene oxide",
+    "phase": "gas",
+    "temperature_C": null,
+    "pressure_atm": null,
+    "substrates": [
+      {
+        "name": "propene oxide",
+        "formula": "C3H6O",
+        "polarity": "polar",
+        "size_A": 3.5
+      }
+    ],
+    "products": [
+      "propanal",
+      "propanone"
+    ],
+    "assisting_molecules": [],
+    "reaction_type": [
+      "isomerization",
+      "ring-opening",
+      "hydride shift"
+    ],
+    "reversibility": false,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "propene oxide",
+      "site_type": "Brønsted acid",
+      "T_site": "Al",
+      "oxygen": "O1",
+      "channel_type": "10MR",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": [
+        "H-bond"
+      ],
+      "competitive_adsorption": [],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [],
+  "intermediates": [
+    {
+      "name": "carbenium-like ion",
+      "type": "ionic",
+      "bound_site": "O framework",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Epoxide ring protonation and ring-opening (to propanal path)",
+      "reactants": [
+        "propene oxide"
+      ],
+      "products": [
+        "carbenium ion intermediate"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": 38.5,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": [
+          {
+            "atoms": [
+              "C",
+              "O_epoxide"
+            ],
+            "distance_A": null
+          }
+        ]
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "1,2-hydride shift (to propanal)",
+      "reactants": [
+        "carbenium ion intermediate"
+      ],
+      "products": [
+        "propanal"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R3",
+      "description": "Epoxide ring protonation and ring-opening (to propanone path)",
+      "reactants": [
+        "propene oxide"
+      ],
+      "products": [
+        "carbenium ion intermediate"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": 42.4,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": [
+          {
+            "atoms": [
+              "C_substituted",
+              "O_epoxide"
+            ],
+            "distance_A": null
+          }
+        ]
+      }
+    },
+    {
+      "step_id": "R4",
+      "description": "1,2-hydride shift (to propanone)",
+      "reactants": [
+        "carbenium ion intermediate"
+      ],
+      "products": [
+        "propanone"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "asymmetric epoxide",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "propanone"
+          ],
+          "activation_energy_kcal_mol": 42.4,
+          "pathway_label": "more substituted C-O break"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "",
+    "model": "",
+    "temperature_dependent": false,
+    "molecules": [],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Supawadee Namuangruk, Pipat Khongpracha, Piboon Pantu, Jumras Limtrakul",
+    "name": "Structures and Reaction Mechanisms of Propene Oxide Isomerization on H-ZSM-5: An ONIOM Study",
+    "date": "2006-12-21",
+    "doi": [
+      "10.1021/jp065266s"
+    ],
+    "journal": "J. Phys. Chem. B"
+  }
+}

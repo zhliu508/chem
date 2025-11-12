@@ -1,0 +1,177 @@
+{
+  "zeolite": {
+    "name": "Au/ZSM-5",
+    "framework_code": "MFI",
+    "pore_system": [
+      "10MR"
+    ],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Brønsted acid",
+        "T_position": "",
+        "proton_on": ""
+      }
+    ],
+    "composition": {
+      "Si/Al": null,
+      "heteroatoms": []
+    },
+    "defects": {
+      "type": "dealumination"
+    }
+  },
+  "reaction_system": {
+    "name": "Low temperature catalytic cracking of n-octane to propylene",
+    "phase": "gas",
+    "temperature_C": 410,
+    "pressure_atm": 1,
+    "substrates": [
+      {
+        "name": "n-octane",
+        "formula": "C8H18",
+        "polarity": "nonpolar",
+        "size_A": 4.5
+      }
+    ],
+    "products": [
+      "propylene"
+    ],
+    "assisting_molecules": [],
+    "reaction_type": [
+      "cracking",
+      "dehydrogenation"
+    ],
+    "reversibility": false,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "n-octane",
+      "site_type": "Brønsted acid",
+      "T_site": "",
+      "oxygen": "",
+      "channel_type": "10MR",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": [
+        "electrostatic"
+      ],
+      "competitive_adsorption": [],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [
+    {
+      "metal": "Au",
+      "oxidation_state": "0",
+      "location": "ZSM-5",
+      "coordination_environment": {
+        "framework_oxygens": null,
+        "geometry": "nanoparticles"
+      },
+      "modification_type": "deposition",
+      "role_in_reaction": [
+        "dehydrogenation",
+        "electron transfer to zeolite"
+      ],
+      "DFT_binding_energy_kcal_mol": null,
+      "ligands": [],
+      "migration_barrier_kcal_mol": null,
+      "electron_transfer_enabled": true
+    }
+  ],
+  "intermediates": [
+    {
+      "name": "alkene",
+      "type": "adsorbed",
+      "bound_site": "acid site",
+      "structure_reference": ""
+    },
+    {
+      "name": "carbenium ion",
+      "type": "ionic",
+      "bound_site": "framework oxygen",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Dehydrogenation of n-octane to alkene",
+      "reactants": [
+        "n-octane"
+      ],
+      "products": [
+        "alkene",
+        "H2"
+      ],
+      "site": "Au",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "Protonation and cracking to propylene",
+      "reactants": [
+        "alkene"
+      ],
+      "products": [
+        "propylene"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "Lewis acid sites",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "aromatics"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "aromatization"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "",
+    "model": "",
+    "temperature_dependent": false,
+    "molecules": [],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Lei Wu, Caixia Qi, Xun Sun, Huijuan Su, Libo Sun, Lijun Zhao, Fengshou Xiao",
+    "name": "A highly efficient bi-functional zeolite catalyst for low temperature catalytic cracking of n-octane to produce propylene: Joint contribution of nanogold and dealumination",
+    "date": "2022-09-12",
+    "doi": [
+      "10.1016/j.apcata.2022.118862"
+    ],
+    "journal": "Applied Catalysis A, General"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "zeolite": {
+    "name": "H-ZSM-5",
+    "framework_code": "MFI",
+    "pore_system": [
+      "10MR"
+    ],
+    "T_sites": [],
+    "acid_sites": [
+      {
+        "site_type": "Brønsted acid",
+        "T_position": "",
+        "proton_on": ""
+      }
+    ],
+    "composition": {
+      "Si/Al": 35,
+      "heteroatoms": []
+    },
+    "defects": {
+      "type": "none"
+    }
+  },
+  "reaction_system": {
+    "name": "Methanol to olefins",
+    "phase": "gas",
+    "temperature_C": null,
+    "pressure_atm": null,
+    "substrates": [
+      {
+        "name": "methanol",
+        "formula": "CH3OH",
+        "polarity": "polar",
+        "size_A": 3.2
+      }
+    ],
+    "products": [
+      "ethene",
+      "propene",
+      "C3+ olefins"
+    ],
+    "assisting_molecules": [],
+    "reaction_type": [
+      "methylation",
+      "cracking",
+      "dealkylation"
+    ],
+    "reversibility": true,
+    "catalytic_cycle_closed": true
+  },
+  "adsorption_sites": [
+    {
+      "adsorbate": "methanol",
+      "site_type": "Brønsted acid",
+      "T_site": "",
+      "oxygen": "",
+      "channel_type": "10MR",
+      "orientation": "",
+      "geometry": {
+        "Hbond_length_A": null,
+        "angle_HOZ": null
+      },
+      "adsorption_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "stabilization_type": [
+        "H-bond"
+      ],
+      "competitive_adsorption": [],
+      "diffusion_barrier_kcal_mol": null
+    }
+  ],
+  "metal_modifications": [],
+  "intermediates": [
+    {
+      "name": "aromatic HCP",
+      "type": "confined",
+      "bound_site": "channel",
+      "structure_reference": ""
+    },
+    {
+      "name": "alkene HCP",
+      "type": "confined",
+      "bound_site": "channel",
+      "structure_reference": ""
+    }
+  ],
+  "elementary_steps": [
+    {
+      "step_id": "R1",
+      "description": "Methylation of aromatic HCP",
+      "reactants": [
+        "methanol",
+        "aromatic HCP"
+      ],
+      "products": [
+        "methylated aromatic"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R2",
+      "description": "Dealkylation of aromatic HCP to ethene/propene",
+      "reactants": [
+        "methylated aromatic"
+      ],
+      "products": [
+        "ethene",
+        "propene"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    },
+    {
+      "step_id": "R3",
+      "description": "Methylation and cracking of alkene HCP",
+      "reactants": [
+        "methanol",
+        "alkene HCP"
+      ],
+      "products": [
+        "C3+ olefins"
+      ],
+      "site": "Brønsted acid",
+      "activation_energy_kcal_mol": {
+        "DFT": null,
+        "DFT-D": null
+      },
+      "reaction_energy_kcal_mol": null,
+      "transition_state_geometry": {
+        "key_bonds": []
+      }
+    }
+  ],
+  "secondary_paths": [
+    {
+      "trigger": "high acid density",
+      "reactions": [
+        {
+          "nucleophile": "",
+          "products": [
+            "coke"
+          ],
+          "activation_energy_kcal_mol": null,
+          "pathway_label": "hydrogen transfer"
+        }
+      ]
+    }
+  ],
+  "diffusion": {
+    "mechanism": "channel confinement",
+    "model": "",
+    "temperature_dependent": true,
+    "molecules": [
+      "olefins"
+    ],
+    "diffusivity": []
+  },
+  "metadata": {
+    "author": "Tingyu Liang, Jialing Chen, Zhangfeng Qin, Sen Wang, Pengfei Wang, Fang Jin, Mei Dong, Jianguo Wang, Weibin Fan",
+    "name": "Insight into induction period of methanol conversion reaction: Reactivity of ethene-precursors over H-ZSM-5 zeolite is independent of Brønsted acid site density",
+    "date": "2022-10-01",
+    "doi": [
+      "10.1016/j.fuel.2022.126062"
+    ],
+    "journal": "Fuel"
+  }
+}
